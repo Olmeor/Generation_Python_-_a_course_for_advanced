@@ -4,11 +4,10 @@
 # последующую строку как значения этих ключей.
 
 def read_csv():
-    keys = []
     result = []
 
     with open('data.csv', 'r', encoding='utf-8') as file:
-        lines = file.readlines();
+        lines = file.readlines()
         keys = lines[0].strip().split(',')
         for i in range(1, len(lines)):
             result.append(dict(zip(keys, lines[i].strip().split(','))))
